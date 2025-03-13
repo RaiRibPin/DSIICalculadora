@@ -6,36 +6,31 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Calculadora - Desenvolvimento de Sistemas II");
-                Console.WriteLine(Dividir(20, 10));
-                Console.WriteLine(Multiplicar(20, 10));
-                Console.WriteLine(Subtrair(20, 10));
-                Console.WriteLine(Somar(20, 10));
-                Console.WriteLine(Potenciar(2, 3));
-        }
+            //Console.WriteLine(Dividir(20, 10));
+            //Console.WriteLine(Multiplicar(20, 10));
+            //Console.WriteLine(Subtrair(20, 10));
+            //Console.WriteLine(Somar(20, 10));
+            //Console.WriteLine(Potenciar(2, 3));
 
-        static double Somar(double valor1, double valor2) 
-        {
-            return valor1 + valor2;    
-        }
+            
+            try
+            {
+                Calculadora calc = new Calculadora();
 
-        static double Subtrair(double valor1, double valor2) 
-        {
-            return valor1 - valor2;
-        }
+                Console.WriteLine("10 + 10 = " + calc.Somar(10, 10));
 
-        static double Multiplicar(double valor1, double valor2)
-        {
-            return valor1 * valor2;
-        }
+                Console.WriteLine("10 - 10 = " + calc.Subtrair(10, 10));
 
-        static double Dividir(double valor1, double valor2)
-        {
-            return valor1 / valor2;
-        }
+                Console.WriteLine("10 * 10 = " + calc.Multiplicar(10, 10));
 
-        static double Potenciar(double valor1, double valor2)
-        {
-            return Math.Pow(valor1, valor2);
+                Console.WriteLine("10 / 10 = " + calc.Dividir(10, 10));
+
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
