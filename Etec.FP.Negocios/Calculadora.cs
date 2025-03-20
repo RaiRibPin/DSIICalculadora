@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Etec.Calculadora.Projeto
+﻿namespace Etec.FP.Negocios
 {
-    class Calculadora
+    public class Calculadora
     {
         public double Somar(double valor1, double valor2)
         {
@@ -25,10 +19,6 @@ namespace Etec.Calculadora.Projeto
 
         public double Dividir(double valor1, double valor2)
         {
-            if (valor2 == 0)
-            {
-                throw new ArgumentException("Não é possível dividir por zero");
-            }
             return valor1 / valor2;
         }
     }
